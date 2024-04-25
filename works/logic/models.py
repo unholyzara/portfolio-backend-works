@@ -21,8 +21,6 @@ class Work(models.Model):
     active = models.BooleanField(default=False)
     date_from = models.DateField()
     date_to = models.DateField(blank=True, null=True)
-    date_from = models.DateField()
-    date_to = models.DateField(blank=True, null=True)
     company = models.ForeignKey(Company, on_delete=models.SET_NULL, null=True)
     role = models.TextField()
     slug = models.SlugField(unique=True)
